@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>品牌商品</title>
+</head>
+<body>
+<h2>品牌商品列表</h2>
+<p>共有{{ goods|length }}件商品</p>
+<ul>
+    {% for good in goods %}
+        <li>{{ good.name }}</li>
+    {% empty %}
+        <li>暂无商品</li>
+    {% endfor %}
+
+</ul>
+</body>
+</html>

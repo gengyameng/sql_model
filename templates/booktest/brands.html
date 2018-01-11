@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>品牌列表</title>
+</head>
+<body>
+<h2>品牌列表：</h2>
+<p>共有{{ brands |length}}个品牌</p>
+<ul>
+    {% for brand in brands %}
+        <li>
+            <a href="{% url 'booktest:b_goods'  brand.id  %}">{{ brand.name }}</a>
+        </li>
+    {% endfor %}
+</ul>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>品类</title>
+</head>
+<body>
+<h2>品类列表：</h2>
+<p>共有{{ cates |length}}个品牌</p>
+<ul>
+    {% for cate in cates %}
+        <li>
+            <a href="{% url 'booktest:c_goods' cate.id %}">{{ cate.name }}</a>
+        </li>
+    {% endfor %}
+</ul>
+</body>
+</html>

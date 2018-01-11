@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商品表</title>
+</head>
+<body>
+<h2>商品表</h2>
+<p>共{{ goods_list |length }}件商品</p>
+<ul>
+    {% for good_list in goods_list %}
+        <li>
+            <a href="{% url 'booktest:b_goods' good_list.0.id %}">{{ good_list.0.name }}</a>--
+            <a href="">{{ good_list.2.name }}</a>--
+            <a href="{% url 'booktest:c_goods' good_list.1.id %}">{{ good_list.1.name }}</a>
+
+        </li>
+    {% endfor %}
+</ul>
+</body>
+</html>
